@@ -353,6 +353,32 @@
              });
          }
 
+          //Hear House -Z
+         if (evt.keyCode == 48 && focus) {
+             var cont = 1;
+             elements.forEach(function(e) {
+                 console.log(e);
+
+                 if (cont === 4) {
+                     e._worldMatrix.m[8] -= 1;
+                 }
+                 cont++;
+             });
+         }
+
+          //Hear House -Z
+         if (evt.keyCode == 57 && !focus) {
+             var cont = 1;
+             elements.forEach(function(e) {
+                 console.log(e);
+
+                 if (cont === 1) {
+                     e._worldMatrix.m[8] -= 1;
+                 }
+                 cont++;
+             });
+         }
+
          //TREE
          //All translations to the tree
          //Move tree to up
